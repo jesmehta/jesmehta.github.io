@@ -1,0 +1,639 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Data Visualization Resources</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3547efbc-a6e9-464c-a93c-becf290c885e" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/woodcuts_13.jpg" style="object-position:center 46.36%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🔭</span></div><h1 class="page-title">Data Visualization Resources</h1></header><div class="page-body"><figure id="c901f1f7-a69e-4dc7-8ee2-321467bce57f" class="link-to-page"><a href="Data%20Visualization%20Resources%203547efbca6e9464ca93cbecf290c885e/Course%20Specific%20c901f1f7a69e4dc78ee2321467bce57f.html"><span class="icon">🎁</span>Course Specific</a></figure><h1 id="b47e260a-f72b-4c90-8ee9-aed7911553c7" class="">Papers</h1><figure id="254ebb8a-067b-4bed-8400-6c785d35c8a0"><a href="https://www.researchgate.net/publication/236870996_DIKIW_Data_Information_Knowledge_Intelligence_Wisdom_and_their_Interrelationships" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">(PDF) DIKIW: Data, Information, Knowledge, Intelligence, Wisdom and their Interrelationships</div><div class="bookmark-description">DIKW hierarchy is the model used for discussion of data, information, knowledge, wisdom and their interrelationships. However, definitions of data, information, and knowledge are entrapped in a logical fallacy known as circular definition. There are some agreements in the definitions without the fallacy. The missing &#x27;Intelligence&#x27; in DIKW plays a major role between knowledge and wisdom.</div></div><div class="bookmark-href"><img src="https://c5.rgstatic.net/m/426351313275430/images/favicon/favicon.ico" class="icon bookmark-icon"/>https://www.researchgate.net/publication/236870996_DIKIW_Data_Information_Knowledge_Intelligence_Wisdom_and_their_Interrelationships</div></div><img src="https://i1.rgstatic.net/publication/236870996_DIKIW_Data_Information_Knowledge_Intelligence_Wisdom_and_their_Interrelationships/links/0deec519c0cac9afca000000/largepreview.png" class="bookmark-image"/></a></figure><p id="18536682-4af8-4315-b70b-8e614d2d94bd" class="">
+</p><h1 id="9ab970b4-a03e-4680-97a4-44a5ec561d6c" class="">Articles</h1><h2 id="47f60172-cfec-472e-8721-c92a9a4d6cb5" class="">Data and Empathy</h2><figure id="14042445-754f-4c0a-a1d2-b1deba069d66"><a href="https://responsibledata.io/2015/10/19/dataviz-the-unempathetic-art/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">DataViz-The UnEmpathetic Art</div><div class="bookmark-description">Can dataviz evoke empathy? Should it even? And if so how? First post in a series towards The Responsible Data Forum on the topic of Data Visualization, Jan 2016, NYC. &quot;If I look at the mass I will never act. If I look at the one, I will.&quot;</div></div><div class="bookmark-href"><img src="https://responsibledata.io/wp-content/uploads/2019/08/cropped-RD_Square_Logo_Red_Filled-192x192.png" class="icon bookmark-icon"/>https://responsibledata.io/2015/10/19/dataviz-the-unempathetic-art/</div></div><img src="https://responsibledata.io/wp-content/uploads/2015/10/DataViz%E2%80%94The-UnEmpathetic-Art.jpg" class="bookmark-image"/></a></figure><figure id="f3ff4072-7876-444b-80c8-20d5b3ba184c"><a href="https://source.opennews.org/articles/what-if-data-visualization-actually-people/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">What If the Data Visualization Is Actually People?</div><div class="bookmark-description">&quot;Are we there yet?&quot; It&#x27;s a classic question. You&#x27;re a kid. And you&#x27;re in the back seat of the car. And it&#x27;s an endless drive. And you just want to know &quot;When, when, when will the wait be over?&quot; And your parents say &quot;45 minutes&quot; and now you have something to count.</div></div><div class="bookmark-href"><img src="https://source.opennews.org/static/base/_v2/img/favicon.ico" class="icon bookmark-icon"/>https://source.opennews.org/articles/what-if-data-visualization-actually-people/</div></div><img src="https://media.opennews.org/cache/e1/ed/e1ed680733d96c3b2080e39d544c2b9b.jpg" class="bookmark-image"/></a></figure><figure id="669e49fb-3ccd-4f7c-aee3-8152d1771cf3"><a href="https://source.opennews.org/articles/connecting-dots/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Connecting with the Dots</div><div class="bookmark-description">One of my favorite movies is the classic 1949 thriller &quot;The Third Man.&quot; The story is about a writer who arrives in gloomy post-war Vienna on the promise of a job only to instead unravel a criminal conspiracy to peddle diluted-and thus ineffective-antibiotics.</div></div><div class="bookmark-href"><img src="https://source.opennews.org/static/base/_v2/img/favicon.ico" class="icon bookmark-icon"/>https://source.opennews.org/articles/connecting-dots/</div></div><img src="https://media.opennews.org/cache/5f/3c/5f3c8ee2ed60d813edef91a555970161.jpg" class="bookmark-image"/></a></figure><figure id="44414390-e708-4488-9611-f431356e23ea"><a href="https://blogs.lse.ac.uk/impactofsocialsciences/2015/10/13/ideological-inheritances-in-the-data-revolution/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Big data problems we face today can be traced to the social ordering practices of the 19th century.</div><div class="bookmark-description">In the 19th century, changes in knowledge were facilitated not only by large quantities of new information pouring in from around the world but by shifts in the production, processing and analysis of that information.</div></div><div class="bookmark-href"><img src="https://blogsmedia.lse.ac.uk/blogs.dir/9/files/2019/02/LSE_Linked_In_Logo_400x400_DR_e0112b-300x300.jpg" class="icon bookmark-icon"/>https://blogs.lse.ac.uk/impactofsocialsciences/2015/10/13/ideological-inheritances-in-the-data-revolution/</div></div><img src="https://blogsmedia.lse.ac.uk/blogs.dir/9/files/2015/10/Nightingale-mortalityfeatured.jpg" class="bookmark-image"/></a></figure><h2 id="adf445a8-5a3e-4b94-9a7f-4198f49c6916" class="">Gyaan</h2><figure id="7c0231b4-b307-4887-8184-fd2e1d447a2f"><a href="https://datajournalism.com/read/longreads/the-unspoken-rules-of-visualisation" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The unspoken rules of visualisation: (and when to break them)</div><div class="bookmark-description">(and when to break them) 29 January 2020 Visualising data is like solving a jigsaw puzzle. To be successful, there are some things you should know in advance -- the scene to be revealed by the pieces is the story you&#x27;d like the data graphic to convey.</div></div><div class="bookmark-href"><img src="https://datajournalism.com/assets/images/favicon.ico" class="icon bookmark-icon"/>https://datajournalism.com/read/longreads/the-unspoken-rules-of-visualisation</div></div><img src="https://s3.eu-central-1.amazonaws.com/datajournalismcom/long-reads/_1200x630_crop_center-center_82_none/katya-austin-I4YsI1zWq_w-unsplash-3.jpg?mtime=1580417401" class="bookmark-image"/></a></figure><h2 id="6d142fcf-f9f1-481a-98f1-ce7e59b7cb69" class="">Factfulness</h2><figure id="21e90114-883e-427f-92ae-bdb4b8ec734e"><a href="https://www.gapminder.org/factfulness/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Factfulness</div><div class="bookmark-description">&quot;The stress-reducing habit of only carrying opinions for which you have strong supporting facts.&quot; - See the book Factfulness &quot; Factfulness is a relaxing habit for critical thinking. It helps you maintain a fact-based worldview. It teaches you how to recognise and avoid the most common ways information gets misinterpreted.</div></div><div class="bookmark-href"><img src="https://www.gapminder.org/ico/favicon.ico" class="icon bookmark-icon"/>https://www.gapminder.org/factfulness/</div></div><img src="https://s3-eu-west-1.amazonaws.com/static.gapminder.org/GapminderMedia/wp-uploads/20180324234316/attention-filter-02-1024x750.jpg" class="bookmark-image"/></a></figure><h2 id="ec3eb284-823d-4fcb-ac3a-8eed64f2990f" class="">DataViz History</h2><p id="2b2cd795-8103-4dac-bef9-d77325fc5eb7" class="">
+</p><p id="830abfbd-7528-49a3-b66a-f09c1f38916d" class="">An interactive infographic on the History of Infographics, and the process behind it.</p><div id="6c935584-699b-496e-8911-314032dab4ff" class="column-list"><div id="dba5824e-4fb4-47a5-8318-3e8b17e187eb" style="width:50%" class="column"><figure id="2eab785d-e979-4e5e-9659-783ee59f2cc4"><a href="https://history.infowetrust.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Map of DataViz Firsts:</div><div class="bookmark-description">An interactive timeline of the most iconic infographics.</div></div><div class="bookmark-href"><img src="https://history.infowetrust.com/images/infowetrust-icon.png" class="icon bookmark-icon"/>https://history.infowetrust.com/</div></div><img src="https://history.infowetrust.com/images/base100.jpg" class="bookmark-image"/></a><figcaption>The Infographic</figcaption></figure></div><div id="d8dd4f0a-6ac2-430f-b452-151f5ee978ae" style="width:50%" class="column"><figure id="85b57d48-e444-4ccf-a102-e0411ebd3537"><a href="https://infowetrust.com/project/history-essay" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Interacting With History - Info We Trust</div><div class="bookmark-description">300 years of information graphic milestones.</div></div><div class="bookmark-href"><img src="https://infowetrust.com/wp-content/uploads/2019/11/infowetrust-icon.png" class="icon bookmark-icon"/>https://infowetrust.com/project/history-essay</div></div><img src="https://infowetrust.com/wp-content/uploads/2019/12/homeFacebook.jpg" class="bookmark-image"/></a><figcaption>The Making of the Infographic</figcaption></figure></div></div><figure id="0e0aace7-bf13-49b2-8988-bb6f02ef7546"><a href="https://www.idashboards.com/blog/2017/11/29/the-history-of-the-history-of-data-visualization/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The History of Data Visualization</div><div class="bookmark-description">The term &quot;Data Visualization&quot; may have firm roots in the 20 th Century, but the concept of data storytelling is as old as time. Humans have been expressing the world through data dating as far back to the invention of the seismograph, the collapse of the Han Dynasty, and the rise of Buddhism.</div></div><div class="bookmark-href"><img src="https://www.idashboards.com/favicon.ico" class="icon bookmark-icon"/>https://www.idashboards.com/blog/2017/11/29/the-history-of-the-history-of-data-visualization/</div></div><img src="https://www.idashboards.com/wp-content/uploads/2017/11/Info-We-Trust.jpg" class="bookmark-image"/></a></figure><h1 id="5449e563-6b52-4f1f-8f12-4efc6d05430c" class="">Case Studies</h1><figure id="b85a34a0-7a09-42ed-b3c3-b0d618758529"><a href="https://www.nytimes.com/interactive/2015/07/24/business/international/the-world-according-to-china-investment-maps.html" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The World According to China</div><div class="bookmark-description">China made large investments in two other South American countries, Venezuela and Argentina, that defaulted on debts to the West, guaranteeing China a steady supply of oil and construction contracts for Chinese companies. CHINA&#x27;S SHARE OF INVESTMENT IN LATIN AMERICA 2005-2013 State-run Chinese banks have lent more than $50 billion to Venezuela, propping up an unstable regime in exchange for oil.</div></div><div class="bookmark-href"><img src="https://www.nytimes.com/vi-assets/static-assets/favicon-4bf96cb6a1093748bf5b3c429accb9b4.ico" class="icon bookmark-icon"/>https://www.nytimes.com/interactive/2015/07/24/business/international/the-world-according-to-china-investment-maps.html</div></div><img src="https://static01.nyt.com/images/2015/07/06/world/asia/the-world-according-to-china-investment-maps-1436222568352/the-world-according-to-china-investment-maps-1436222568352-facebookJumbo.png" class="bookmark-image"/></a></figure><figure id="ec68efc6-81be-475b-a73c-08eb1c40c886"><a href="https://www.nytimes.com/interactive/2015/07/14/science/space/pluto-flyby.html?smid=tw-share&amp;_r=2" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">New Horizons&#x27; Pluto Flyby</div><div class="bookmark-description">The Pluto system is tipped on its side, like a target facing the sun. New Horizons did not carry enough fuel to go into orbit around Pluto, so it had only one chance to study the dwarf planet up close. The Pluto system is tipped on its side, like a target facing the sun.</div></div><div class="bookmark-href"><img src="https://www.nytimes.com/vi-assets/static-assets/favicon-4bf96cb6a1093748bf5b3c429accb9b4.ico" class="icon bookmark-icon"/>https://www.nytimes.com/interactive/2015/07/14/science/space/pluto-flyby.html?smid=tw-share&amp;_r=2</div></div><img src="https://static01.nyt.com/images/2015/07/14/science/space/pluto-flyby-1436561850736/pluto-flyby-1436561850736-facebookJumbo.png" class="bookmark-image"/></a></figure><figure id="26437fc9-a61c-4dd6-8599-82c666788af7"><a href="https://guns.periscopic.com/?year=2010" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">United States gun death data visualization by Periscopic</div><div class="bookmark-description">U.S. gun deaths 2010 &amp; 2013: you haven&#x27;t seen numbers like this before: https://guns.periscopic.com/ by @periscopic</div></div><div class="bookmark-href"><img src="https://guns.periscopic.com/favicon.ico" class="icon bookmark-icon"/>https://guns.periscopic.com/?year=2010</div></div><img src="https://guns.periscopic.com/img/open_graph.png" class="bookmark-image"/></a></figure><figure id="e7383f9c-8225-4cfc-8a6f-8185917352e9"><a href="https://what-if.xkcd.com/155/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Toaster vs. Freezer</div><div class="bookmark-description">Would a toaster still work in a freezer? - My Brother, My Brother and Me, Episode 343, discussing a Yahoo Answers question On a recent episode of Justin, Travis, and Griffin McElroy&#x27;s terrific advice podcast, My Brother, My Brother and Me, the brothers pondered a Yahoo Answers question about what would happen if you put a toaster inside a freezer.</div></div><div class="bookmark-href"><img src="https://what-if.xkcd.com/imgs/favicon.ico" class="icon bookmark-icon"/>https://what-if.xkcd.com/155/</div></div><img src="https://what-if.xkcd.com/imgs/a/155/antarctica.png" class="bookmark-image"/></a></figure><figure id="9af99170-a6af-4f4f-b9e9-596c843088cd"><a href="https://xkcd.com/1040/large/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href"><img src="https://xkcd.com/favicon.ico" class="icon bookmark-icon"/>https://xkcd.com/1040/large/</div></div></a></figure><figure id="b8d99aed-6b1b-4125-82ec-8ed11358aa4d"><a href="https://xkcd.com/657/large/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href"><img src="https://xkcd.com/favicon.ico" class="icon bookmark-icon"/>https://xkcd.com/657/large/</div></div></a></figure><figure id="9e0c3e5d-cd8c-49c2-bb90-d667fa986eee"><a href="https://boingboing.net/2016/03/23/xkcd-is-coming-to-americas-s.html" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">XKCD is coming to America&#x27;s science textbooks</div><div class="bookmark-description">Textbook giant Houghton Mifflin Harcourt publishes Randall Munroe&#x27;s amazing Thing Explainer, and a lucky accident happened when someone in the textbook division noticed Munroe&#x27;s amazing explanatory graphics, annotated with simple language (the book restricts itself to the thousand most common English words) and decided to include some of them in the next editions of its high-school chemistry, biology and physics textbooks.</div></div><div class="bookmark-href"><img src="https://boingboing.net/wp-content/uploads/fbrfg/favicon.ico?v=2.1" class="icon bookmark-icon"/>https://boingboing.net/2016/03/23/xkcd-is-coming-to-americas-s.html</div></div><img src="https://i0.wp.com/media.boingboing.net/wp-content/uploads/2016/03/056c026d-1c66-4d42-9fae-a8e96df290c5-1020x993.jpg?fit=763%2C431&amp;ssl=1" class="bookmark-image"/></a></figure><p id="06775e78-81c2-4de2-9b2d-912c1090049a" class="block-color-gray">
+</p><h2 id="21669ce3-2ac1-4b79-87f4-4cff2ae3855a" class="">Case Study Sources</h2><p id="850f91eb-30e1-497a-b1bb-53fb334eef5e" class="">This is a non-exhaustive list. There are more sources out there, and you are free to choose from them. This list will be updated as new and interesting sources are stumbled upon.</p><p id="10b78320-3a58-4c53-a5e2-901a500025bd" class="">
+</p><figure id="d9323703-5374-4684-a36a-3f60e43c8215"><a href="https://flowingdata.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">FlowingData</div><div class="bookmark-description">FlowingData</div></div><div class="bookmark-href"><img src="https://flowingdata.com/wp-content/themes/fd-modern-5-8-3/images/favicon.ico" class="icon bookmark-icon"/>https://flowingdata.com/</div></div><img src="https://flowingdata.com/wp-content/uploads/2020/07/process-100-featured-750x420.png" class="bookmark-image"/></a></figure><figure id="3fc789d5-20ad-4f22-b012-b911ac63d246"><a href="https://infowetrust.com/work" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Work</div><div class="bookmark-description">Add a description about your page or projects. Should be around 135 to 160 characters.</div></div><div class="bookmark-href"><img src="https://infowetrust.com/wp-content/uploads/2019/11/infowetrust-icon.png" class="icon bookmark-icon"/>https://infowetrust.com/work</div></div><img src="https://infowetrust.com/wp-content/uploads/2020/01/370x370_0011_bloom.jpg" class="bookmark-image"/></a></figure><figure id="930caed6-0cb6-4f44-b0ca-b532fe163f64"><a href="https://periscopic.com/#!/impacts/trust_experience" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Periscopic: Do good with data</div></div><div class="bookmark-href"><img src="https://periscopic.com/favicon.ico" class="icon bookmark-icon"/>https://periscopic.com/#!/impacts/trust_experience</div></div></a></figure><figure id="ad01f54d-e700-4332-bbce-5e489b7e9b01"><a href="https://informationisbeautiful.net/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Information is Beautiful</div><div class="bookmark-description">Distilling the world&#x27;s data, information &amp; knowledge into beautiful infographics &amp; visualizations</div></div><div class="bookmark-href"><img src="https://informationisbeautiful.net/favicon-16x16.png" class="icon bookmark-icon"/>https://informationisbeautiful.net/</div></div><img src="https://infobeautiful4.s3.amazonaws.com/2020/06/splash.png" class="bookmark-image"/></a></figure><p id="a155fb6c-27e1-4340-bbed-efc6e9226323" class="">
+</p><p id="fef4c24a-5926-41ea-a694-b490fb11073c" class="">
+</p><figure id="91864481-bd33-4be6-95d0-7e2c75506139"><a href="https://www.reddit.com/r/dataisbeautiful/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">r/dataisbeautiful</div><div class="bookmark-description">r/dataisbeautiful: A place to share and discuss visual representations of data: Graphs, charts, maps, etc.</div></div><div class="bookmark-href"><img src="https://www.redditstatic.com/desktop2x/img/favicon/favicon-16x16.png" class="icon bookmark-icon"/>https://www.reddit.com/r/dataisbeautiful/</div></div><img src="https://styles.redditmedia.com/t5_2tk95/styles/communityIcon_hrq90p2z27k11.jpg?width=256&amp;format=pjpg&amp;s=adbf89b8f1cd7c19f29cfc9b3680c6eb35542a9d" class="bookmark-image"/></a></figure><figure id="38628c05-c72f-4ea8-bef6-3691661c0e6f"><a href="https://www.reddit.com/r/DataArt/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">r/DataArt</div><div class="bookmark-description">The place for aesthetically satisfying data visualizations that you&#x27;d be proud to hang on your wall. ||| Sign up to the mailing list: artycharty.firebaseapp.com ||| Follow us on Twitter: twitter.com/ArtyCharty</div></div><div class="bookmark-href"><img src="https://www.redditstatic.com/desktop2x/img/favicon/favicon-16x16.png" class="icon bookmark-icon"/>https://www.reddit.com/r/DataArt/</div></div><img src="https://styles.redditmedia.com/t5_3pilg/styles/communityIcon_l7y6zc7lzeo11.png?width=256&amp;s=b564153ded18a8485a1e4e343221365f172e9659" class="bookmark-image"/></a></figure><p id="35da7b9e-421e-4214-baf7-8e4164dda71e" class="">
+</p><figure id="91dd43f1-af21-49ea-8600-52b0be9c6781"><a href="https://www.gapminder.org" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Gapminder</div><div class="bookmark-description">Imagine the world as a street. All houses are lined up by income, the poor living to the left and the rich to the right. Everybody else somewhere in between. Where would you live? Would your life look different than your neighbours&#x27; from other parts of the world, who share the same income level?</div></div><div class="bookmark-href"><img src="https://www.gapminder.org/ico/favicon.ico" class="icon bookmark-icon"/>https://www.gapminder.org</div></div><img src="https://static.gapminder.org/GapminderMedia/wp-uploads/20161007095315/carosel-image21-new.jpg" class="bookmark-image"/></a></figure><figure id="20012800-cbb3-4bb7-8bfb-6078696b0229"><a href="https://ourworldindata.org/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Our World in Data</div><div class="bookmark-description">Research and data to make progress against the world&#x27;s largest problems</div></div><div class="bookmark-href"><img src="https://ourworldindata.org/favicon.ico" class="icon bookmark-icon"/>https://ourworldindata.org/</div></div><img src="https://ourworldindata.org/default-thumbnail.jpg" class="bookmark-image"/></a></figure><figure id="dce09117-efde-45cf-aefd-02513df336ef"><a href="https://explorabl.es/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Explorable Explanations</div><div class="bookmark-description">Lion cubs play-fight to learn social skills. Rats play to learn emotional skills. Monkeys play to learn cognitive skills. And yet, in the last century, we humans have convinced ourselves that play is useless, and learning is supposed to be boring. Gosh, no wonder we&#x27;re all so miserable.</div></div><div class="bookmark-href"><img src="https://explorabl.es/favicon.png" class="icon bookmark-icon"/>https://explorabl.es/</div></div><img src="http://explorabl.es/-sharing/index.png" class="bookmark-image"/></a></figure><figure id="3b01c777-5b01-477a-9148-977eb1de026d"><a href="https://www.wri.org/resources" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Maps &amp; Data</div><div class="bookmark-description">The Aqueduct Global Flood Analyzer is a web-based interactive platform which measures river flood impacts by urban damage, affected GDP, and affected population at the country, state, and river basin scale across the globe.</div></div><div class="bookmark-href"><img src="https://files.wri.org/s3fs-public/favicon.ico" class="icon bookmark-icon"/>https://www.wri.org/resources</div></div><img src="https://files.wri.org/s3fs-public/flood_map.jpg" class="bookmark-image"/></a><figcaption><em>Backtrack from Sakshi&#x27;s showcase</em></figcaption></figure><figure id="ac6d9b54-dc00-46d4-b866-c62d197bcd15"><a href="https://chitchart.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Chit Chart | Let&#x27;s talk about facts</div><div class="bookmark-description">Our team collects data from reliable sources on the Internet and designs charts in order to communicate simple, or not so simple data about our world. We consider our website to be more fun and less educative. We are doing our best to assure that our charts are 100% correct, but we also need your help.</div></div><div class="bookmark-href"><img src="https://chitchart.com/sites/default/files/favicon.ico" class="icon bookmark-icon"/>https://chitchart.com/</div></div><img src="https://chitchart.com/sites/default/files/fifa_world_cup_winners_site.jpg" class="bookmark-image"/></a><figcaption><em>Courtesy, Zeel&#x27;s showcase</em></figcaption></figure><figure id="012beb06-b8e9-4493-804b-9abee3027c76"><a href="https://pudding.cool/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The Pudding explains ideas debated in culture with visual essays.</div><div class="bookmark-description">The Pudding explains ideas debated in culture with visual essays.</div></div><div class="bookmark-href"><img src="https://pudding.cool/favicon-16x16.png" class="icon bookmark-icon"/>https://pudding.cool/</div></div><img src="https://pudding.cool/common/assets/misc/social-facebook.jpg" class="bookmark-image"/></a></figure><figure id="2f58eabf-8a7f-4901-a6ee-4b0fcc65e180"><a href="https://gramener.com/blog/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Gramener Blog</div><div class="bookmark-description">August 04, 2017 - We happened to find an entire dump of close to 1500 Hindi movie songs (released) of Kishore Kumar &amp; feasted on it. An accurate database of Bollywood songs is so hard to find and we were simply happy to depend entirely on the information provided by the meta tags from the mp3 dump.</div></div><div class="bookmark-href">https://gramener.com/blog/</div></div><img src="https://gramener.com/blog/share/gvm.jpg" class="bookmark-image"/></a></figure><h2 id="5ac9851d-dff0-431a-a387-e58359946441" class="">Other interesting Case Studies</h2><figure id="2ec5cbe3-d820-441b-bea1-983e625aa210"><a href="https://fivethirtyeight.com/features/gun-deaths/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Gun Deaths In America</div><div class="bookmark-description">The data in this interactive graphic comes primarily from the Centers for Disease Control and Prevention&#x27;s Multiple Cause of Death database, which is derived from death certificates from all 50 states and the District of Columbia and is widely considered the most comprehensive estimate of firearm deaths.</div></div><div class="bookmark-href"><img src="https://fivethirtyeight.com/wp-content/themes/espn-fivethirtyeight/assets/images/favicon.ico?v=1.0.23" class="icon bookmark-icon"/>https://fivethirtyeight.com/features/gun-deaths/</div></div><img src="https://fivethirtyeight.com/wp-content/uploads/2018/02/gundeaths-inter-4by3r1.png?w=575" class="bookmark-image"/></a></figure><figure id="5101c28f-1087-4dad-a4fb-07a7b31d387a"><a href="https://whydocatsanddogs.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Why do cats and dogs ...?</div><div class="bookmark-description">You know, cats and dogs can be utterly strange sometimes. Actually, more often than sometimes. Ever since getting a cat 14 years ago, I&#x27;ve come to realize how truly enigmatic animals can be. Why does my cat go crazy for my sweaty gym clothes?</div></div><div class="bookmark-href"><img src="https://whydocatsanddogs.com/assets/images/favicon/general/favicon.ico" class="icon bookmark-icon"/>https://whydocatsanddogs.com/</div></div><img src="https://whydocatsanddogs.com/assets/images/why_do_cats_and_dogs_feature.jpg" class="bookmark-image"/></a><figcaption><em>Courtesy, Bani&#x27;s showcase</em></figcaption></figure><div id="2d0198b0-7a50-4b4e-b6c3-cf342ef20e65" class="column-list"><div id="e445710a-741a-42f1-86d3-18511879a6b8" style="width:50%" class="column"><figure id="76dc033c-0fe1-4b48-bd74-ea5b554b1ede"><a href="http://senseable.mit.edu/sonic-cities/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Sonic Cities</div><div class="bookmark-description">What did cities sound like during the lockdown?</div></div><div class="bookmark-href">http://senseable.mit.edu/sonic-cities/</div></div></a><figcaption>Claim this !</figcaption></figure></div><div id="d1bea982-643f-47a2-9a64-70ab2307027d" style="width:50%" class="column"><figure id="754a6be0-128a-4b56-b166-dba56aea3d9c"><a href="https://medium.com/senseable-city-lab/sonic-cities-listening-to-parks-during-lockdown-f9027b7deb46" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Sonic Cities: Listening to Parks During Lockdown</div><div class="bookmark-description">&quot;Wherever we are, what we hear is mostly noise. When we ignore it, it disturbs us. When we listen to it, we find it fascinating&quot;. John Cage, 1938 Cities have changed profoundly as a result of the COVID-19 pandemic. Stay-at-home (SAH) policies have suddenly shut down schools, work, and leisure spaces, drastically reduced activities in supermarkets, bars, and restaurants.</div></div><div class="bookmark-href"><img src="https://cdn-static-1.medium.com/_/fp/icons/favicon-rebrand-medium.3Y6xpZ-0FSdWDnPM3hSBIA.ico" class="icon bookmark-icon"/>https://medium.com/senseable-city-lab/sonic-cities-listening-to-parks-during-lockdown-f9027b7deb46</div></div><img src="https://miro.medium.com/max/1200/1*sZKW5_ZjZh3iELi_c7HHtw.png" class="bookmark-image"/></a></figure></div></div><figure id="47214e17-bb32-4a2e-988f-376755030a71"><a href="https://www.cloudred.com/labprojects/nyctrees/index.php?year=2005" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">An Interactive Visualization of NYC Street Trees | A Project by Cloudred</div><div class="bookmark-description">We were curious about the common and no- so-common trees planted in the five boroughs of New York City. We wanted to create a visualization that allow us to quickly evaluate tree distribution. We believe that engaging, visual interfaces have the power to make complex datasets more accessible.&quot;</div></div><div class="bookmark-href"><img src="https://www.cloudred.com/favicon.ico" class="icon bookmark-icon"/>https://www.cloudred.com/labprojects/nyctrees/index.php?year=2005</div></div><img src="http://cloudred.com/labprojects/nyctrees/trees/grid-trees.jpg" class="bookmark-image"/></a><figcaption>Claim this !</figcaption></figure><figure id="7ba18949-160c-47ac-8147-3b30abceae02"><a href="https://pudding.cool/2018/08/wiki-death/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Life After Death on Wikipedia</div><div class="bookmark-description">But just how big? To put it in perspective, let&#x27;s look at living icon Beyoncé. Here are her (English-language) Wikipedia pageviews between March and May of 2016, in 48-hour intervals. On April 24, Beyoncé dropped and the internet went wild. Her pageviews increased tenfold from about 30 thousand to nearly 300 thousand.</div></div><div class="bookmark-href"><img src="https://pudding.cool/favicon.ico" class="icon bookmark-icon"/>https://pudding.cool/2018/08/wiki-death/</div></div><img src="https://pudding.cool/2018/08/wiki-death/assets/social/social--facebook.jpg" class="bookmark-image"/></a><figcaption>Claim this !</figcaption></figure><figure id="44bc5de6-ee02-490e-9c0f-909ffcdbee2f"><a href="https://pudding.cool/2018/11/dearabby/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">30 Years of American Anxieties</div><div class="bookmark-description">Husbands who have lost interest in sleeping with their wives were especially common in the 2010s. Whether it&#x27;s because they&#x27;re &quot;addicted to adult porn movies&quot; or have simply lost interest, sexually frigid husbands were the most common sex-related concern.</div></div><div class="bookmark-href"><img src="https://pudding.cool/favicon.ico" class="icon bookmark-icon"/>https://pudding.cool/2018/11/dearabby/</div></div><img src="https://pudding.cool/2018/11/dearabby/assets/img/facebook.png" class="bookmark-image"/></a><figcaption>Claim this !</figcaption></figure><figure id="eac6d095-5c53-4d1a-8da0-3c709241acff"><a href="https://www.theguardian.com/australia-news/datablog/ng-interactive/2017/sep/28/hooked-how-pokies-are-designed-to-be-addictive" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Hooked: how pokies are designed to be addictive</div><div class="bookmark-description">Poker machines use a range of design features that leverage psychology to keep people playing. Here, we break them down so you can see exactly how they work, and how it affects people</div></div><div class="bookmark-href"><img src="https://assets.guim.co.uk/images/favicons/46bd2faa1ab438684a6d4528a655a8bd/32x32.ico" class="icon bookmark-icon"/>https://www.theguardian.com/australia-news/datablog/ng-interactive/2017/sep/28/hooked-how-pokies-are-designed-to-be-addictive</div></div><img src="https://i.guim.co.uk/img/media/d514d08d2b44220ca4bd08f067d6720f6691873c/0_0_1000_600/master/1000.jpg?width=1200&amp;height=630&amp;quality=85&amp;auto=format&amp;fit=crop&amp;overlay-align=bottom%2Cleft&amp;overlay-width=100p&amp;overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&amp;enable=upscale&amp;s=e1eb3898cedadba5f3cf367ff7219817" class="bookmark-image"/></a></figure><figure id="84d7e66f-17f6-4487-a72a-5c341ca1756d"><a href="https://ncase.me/polygons/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Parable of the Polygons</div><div class="bookmark-description">These little cuties are 50% Triangles, 50% Squares, and 100% slightly shapist. But only slightly! In fact, every polygon prefers being in a diverse crowd: You can only move them if they&#x27;re unhappy with their immediate neighborhood. Once they&#x27;re OK where they are, you can&#x27;t move them until they&#x27;re unhappy with their neighbors again.</div></div><div class="bookmark-href"><img src="https://ncase.me/polygons/favicon.png" class="icon bookmark-icon"/>https://ncase.me/polygons/</div></div><img src="http://ncase.me/polygons/social/thumbnail.png" class="bookmark-image"/></a><figcaption>Courtesy, Sakshi !</figcaption></figure><figure id="a8d34890-a036-4534-97be-48c9e9e1938b"><a href="https://visual.ly/community/Infographics/food/dark-side-food-dark-version" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">THE DARK SIDE OF THE FOOD - Dark Version</div><div class="bookmark-description">Data on restaurant-associated food borne outbreaks reported in England and Wales from 1992 to 2009. This data visualization was originally made for the &quot;Food Poisoning&quot; challenge organized by Kantar ...</div></div><div class="bookmark-href"><img src="https://visual.ly/sites/all/themes/visually2/favicon.ico" class="icon bookmark-icon"/>https://visual.ly/community/Infographics/food/dark-side-food-dark-version</div></div><img src="https://thumbnails-visually.netdna-ssl.com/the-dark-side-of-the-food--dark-version_54ecc1fb35e35_w250_h250.png" class="bookmark-image"/></a></figure><p id="370cbb9f-472e-4149-9f18-a4bdaecf335b" class="">
+</p><figure id="28a1000e-3293-49cd-afb4-754118f47454"><a href="https://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Interactive graphic: See every satellite orbiting earth</div><div class="bookmark-description">It&#x27;s the world above us.</div></div><div class="bookmark-href"><img src="https://qz.com/public/images/favicon-light-mode.ico" class="icon bookmark-icon"/>https://qz.com/296941/interactive-graphic-every-active-satellite-orbiting-earth/</div></div><img src="https://cms.qz.com/wp-content/uploads/2014/11/satellites.png?quality=75&amp;strip=all&amp;w=1200&amp;h=630&amp;crop=1" class="bookmark-image"/></a></figure><h1 id="2f31b18b-978b-4b07-962b-126afdd22dbd" class="">DataSets</h1><p id="245435a0-bcd5-4d90-bb4b-7ff462bc1150" class="">A lot of the case studies have their datasets available as well. Look out for those too.</p><figure id="cd2cbc61-cdc1-487e-bac2-66bfa8f85322"><a href="https://datasets.wri.org/dataset" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Datasets - Data | World Resources Institute</div><div class="bookmark-description">The Tracker contains information on two types of renewables activities commonly being pursued by local governments in the United States: 1. Electricity purchases and transactions, such as on-site solar, community solar projects, off-site power purchase agreements (PPAs), and green tariff...</div></div><div class="bookmark-href"><img src="https://datasets.wri.org/images/icons/ckan.ico" class="icon bookmark-icon"/>https://datasets.wri.org/dataset</div></div><img src="http://datasets.wri.org/dataset/aedf6605-3687-40a8-8087-de3f1103a848/resource/f32f890b-8efe-40b9-a83c-b9aaae21f79f/download/cvf-mapping-of-opportunity-thumnail.jpg" class="bookmark-image"/></a></figure><figure id="d4749553-e6fd-4c46-96e3-c9ba70b0eb3d"><a href="https://numerical.co.in/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href"><img src="https://d81hse3zhrsam.cloudfront.net/images/FaviconLogo.png" class="icon bookmark-icon"/>https://numerical.co.in/</div></div></a><figcaption><em>Courtesy, Aakash</em></figcaption></figure><h1 id="2709ac53-dd5d-4a66-8848-fef1f5d30fd4" class="">Tools</h1><p id="28f93f3d-7d21-43a2-ae6e-e29b3da4477d" class="">*Digital tools. <em>Analog is infinite.</em></p><p id="5f72bea9-3f89-4f16-b949-49b7db485ecb" class="">**Non-exhaustive list. You are free to explore other tools as well.</p><p id="6a481671-6845-4b8b-8387-677594ccff46" class="">
+</p><ul id="804c7f1d-cfe2-4107-95f2-00c441e97b6f" class="bulleted-list"><li>MS Excel</li></ul><ul id="a40e611f-c048-4202-bf93-4bec993426b0" class="bulleted-list"><li>Adobe Illustrator (duh!)</li></ul><ul id="48c232ed-46f5-4ceb-ae78-ac75dc6bce41" class="bulleted-list"><li>Processing | p5.js</li></ul><ul id="bbae493e-da0a-432d-b817-887e77301c5f" class="bulleted-list"><li>Tableau Desktop</li></ul><figure id="aae5a765-9667-4f19-848b-9921aefef320"><a href="https://public.tableau.com/en-us/s/resources" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Resources</div><div class="bookmark-description">Iron Viz is Tableau&#x27;s own data visualization contest which consists of a series of topic-themed virtual qualifier competitions that determine the finalists who advance to a live on-stage championship at either Tableau Conference Europe or Tableau Conference.</div></div><div class="bookmark-href"><img src="https://public.tableau.com/s/favicon.ico" class="icon bookmark-icon"/>https://public.tableau.com/en-us/s/resources</div></div></a><figcaption>Tableau</figcaption></figure><ul id="d58c3204-25cb-40b7-9395-87a6b8b8575c" class="bulleted-list"><li>Datawrapper</li></ul><figure id="e43652c3-5a46-45ad-9578-8717a4b7fbd3"><a href="https://www.datawrapper.de/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Datawrapper</div><div class="bookmark-description">It&#x27;s free &amp; no sign-up needed. Use one of our 19 interactive &amp; responsive chart types ranging from simple bars and lines to arrow, range and scatter plots. Learn more about our charts We offer three interactive &amp; responsive map types for making anything from locator maps to thematic choropleth &amp; symbol maps.</div></div><div class="bookmark-href"><img src="https://www.datawrapper.de/img/favicon/favicon-16x16.png" class="icon bookmark-icon"/>https://www.datawrapper.de/</div></div><img src="https://www.datawrapper.de/img/share/dw.jpg" class="bookmark-image"/></a></figure><ul id="11bd74d8-7398-4b3d-9c9a-a378cb9559b5" class="bulleted-list"><li>Google Data Studio</li></ul><ul id="09156af3-a97d-4bfc-b30a-5e44b8b44290" class="bulleted-list"><li>Gapminder.org</li></ul><figure id="a6f684fa-b0d8-464a-b6c6-4fd38be0e0cf"><a href="https://www.gapminder.org/tools/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Gapminder Tools</div><div class="bookmark-description">Animated global statistics that everyone can understand</div></div><div class="bookmark-href"><img src="https://www.gapminder.org/tools/favicon.ico" class="icon bookmark-icon"/>https://www.gapminder.org/tools/</div></div><img src="http://www.gapminder.org/tools/assets/images/social-share.png" class="bookmark-image"/></a></figure><p id="04c2a2b3-1b4c-450f-b79c-3db61b094288" class="">
+</p><h3 id="266b3390-7081-456a-b194-dddee7b7716b" class="">Word Counters</h3><figure id="719014d5-fabf-4f44-a47a-bec4f1fed87f"><a href="https://wordcounttools.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Word Count Tool - The Best Word Counter</div><div class="bookmark-description">What is regarded as a word? A word contains many characters (even including emoji). Words are separated by spaces, hyphens, punctuation marks... What is regarded as a difficult word? A word that does not belong to the list of 3000 familiar words. What is regarded as a unique word?</div></div><div class="bookmark-href"><img src="https://wordcounttools.com/favicon.ico" class="icon bookmark-icon"/>https://wordcounttools.com/</div></div><img src="https://wordcounttools.com/assets/site_image.png" class="bookmark-image"/></a></figure><figure id="5cf6a6de-3762-457e-bf77-f6eeb90d7f39"><a href="https://wordcounter.net/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">WordCounter - Count Words &amp; Correct Writing</div><div class="bookmark-description">Apart from counting words and characters, our online editor can help you to improve word choice and writing style, and, optionally, help you to detect grammar mistakes and plagiarism. To check word count, simply place your cursor into the text box above and start typing.</div></div><div class="bookmark-href"><img src="https://wordcounter.net/favicon.ico" class="icon bookmark-icon"/>https://wordcounter.net/</div></div><img src="https://wordcounter.net/images/word-counter.jpg" class="bookmark-image"/></a></figure><p id="7ec1792d-eb48-4236-8dd8-8e64c22b4700" class="">
+</p><h3 id="d012ef76-0582-4db9-a247-5eb8b2c31644" class="">Maps</h3><figure id="ef79549c-82ad-43bf-be70-aeca38f57dde"><a href="https://cadmapper.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CADMAPPER - Worldwide map files for any design program</div><div class="bookmark-description">Free City Files Help Sign In Instant CAD files for any location on earth. Architects and urban planners use Cadmapper to save hours of routine drawing. It transforms data from public sources such as OpenStreetMap, NASA, and USGS into neatly organized CAD files.</div></div><div class="bookmark-href"><img src="https://cadmapper.com/favicon-16x16.png" class="icon bookmark-icon"/>https://cadmapper.com/</div></div><img src="https://cadmapper.com/og_1e214a.png" class="bookmark-image"/></a></figure><h1 id="da15e92c-eb12-486c-a14b-8c26c8ce4a43" class="">Other Interesting Content</h1><figure id="f8874d29-2eea-43e0-b9cd-9120e29b8fa0"><a href="http://ft-interactive.github.io/visual-vocabulary/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Visual Vocabulary</div></div><div class="bookmark-href">http://ft-interactive.github.io/visual-vocabulary/</div></div></a></figure><figure id="10853712-df42-49db-8d27-554f05a70e19"><a href="https://www.youtube.com/channel/UCkWbqlDAyJh2n8DN5X6NZyg/featured" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Data Is Beautiful</div><div class="bookmark-description">This channel is my passion project taking us on a fun trip down memory lane together so we can relive the colorful events we all experienced. I am a first-ye...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/5913b7a7/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/channel/UCkWbqlDAyJh2n8DN5X6NZyg/featured</div></div><img src="https://yt3.ggpht.com/a/AATXAJzmXkZPeo4QwdjE8QF5QjS4F6RnztqlaDHpjNou=s900-c-k-c0xffffffff-no-rj-mo" class="bookmark-image"/></a></figure><figure id="427f9e9f-8aaa-4e5e-a9ca-6453f98a8b36"><a href="https://www.reddit.com/r/visualization/comments/hop0gj/oc_florence_on_the_move_looking_at_the/?utm_source=share&amp;utm_medium=web2x" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">[OC] Florence on the move - Looking at the Nightingale chart from different perspectives</div><div class="bookmark-description">60.5k members in the visualization community. For topics related to information visualization and the design of graphs, charts, maps, etc.</div></div><div class="bookmark-href"><img src="https://www.redditstatic.com/desktop2x/img/favicon/favicon-16x16.png" class="icon bookmark-icon"/>https://www.reddit.com/r/visualization/comments/hop0gj/oc_florence_on_the_move_looking_at_the/?utm_source=share&amp;utm_medium=web2x</div></div><img src="https://external-preview.redd.it/u60XXnpO6UorTk29Lu5VCt8A0dflwXU1J7wkqzeoXdE.png?format=pjpg&amp;auto=webp&amp;s=ecce3446cb03d160c04e36fd8ac8c0356a9c11d7" class="bookmark-image"/></a></figure><figure id="5811f357-1bab-4cdf-8e79-0caba44510d9"><a href="https://datastori.es/149-xkcd-or-the-art-of-data-storytelling-with-web-cartoons/#t=49:49.499" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">149 | xkcd or the art of data storytelling with web cartoons</div><div class="bookmark-description">Randall Munroe is the mastermind behind the xkcd webcomics which have zillions of fans around the globe. In his stick figure cartoons and hilarious mini-stories, he comments on complicated scientific issues. Over the years, Randall has also created a number of data-heavy visualizations.</div></div><div class="bookmark-href"><img src="https://datastori.es/wp-content/uploads/2016/01/cropped-data-stories-icon-192x192.png" class="icon bookmark-icon"/>https://datastori.es/149-xkcd-or-the-art-of-data-storytelling-with-web-cartoons/#t=49:49.499</div></div><img src="http://datastori.es/wp-content/uploads/2017/12/ds-1400-facelift.png" class="bookmark-image"/></a></figure><p id="2e1f9e94-f271-4186-8684-69e06c2ea19f" class="">
+</p><h3 id="e30c6771-a710-41d5-af63-3e7f283db7a8" class="">Podcasts</h3><figure id="3315cd1d-d6fd-4561-9e78-010171c337b9"><a href="https://datastori.es/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Data Stories</div><div class="bookmark-description">Show full episode archive 11/01/2017 Dear Data Stories Friends, We are ready to try something new together with you. After many years of financial support from our generous sponsors, we now want to move to a crowdfunding model, where the show is funded by you - our listeners.</div></div><div class="bookmark-href"><img src="https://datastori.es/wp-content/uploads/2016/01/cropped-data-stories-icon-192x192.png" class="icon bookmark-icon"/>https://datastori.es/</div></div><img src="https://datastori.es/wp-content/uploads/2016/01/cropped-data-stories-icon.png" class="bookmark-image"/></a></figure><figure id="56eb09f4-6d88-479e-9e98-2c312d76e69f"><a href="https://freakonomics.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Freakonomics - The hidden side of everything</div><div class="bookmark-description">After Bode Miller told 60 Minutes that he often drank the night before ski races, and that he&#x27;d even raced while still drunk, he was raked over the coals and forced to grovel and apologize. Now we learn that Tour de France winner Floyd Landis (here&#x27;s a recent posting on the subject), who tested...</div></div><div class="bookmark-href"><img src="https://freakonomics.com/favicon.ico" class="icon bookmark-icon"/>https://freakonomics.com/</div></div><img src="https://freakonomics.com/wp-content/uploads/2016/01/SuperFreak-Paperback-300x450.jpg" class="bookmark-image"/></a></figure></div></article></body></html>
