@@ -4,7 +4,7 @@
 Starting with Genuary 2021
 
 Day 1 | Genuary Day 1 : Triple Nested Loop - Surf's Up
-https://www.instagram.com/p/CJhDSNgFNr2/
+(https://www.instagram.com/p/CJhDSNgFNr2/)
 
 Day 2 | Genuary Day 1 : Triple nested Loops - Churchlight
 https://www.instagram.com/p/CJhLs0gF5Z9/
