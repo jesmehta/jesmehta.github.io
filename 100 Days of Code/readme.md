@@ -23,5 +23,5 @@ Day 6 | Genuary Day 5 : Randomness increases along Y axis
 https://www.instagram.com/p/CKexM35lC7e/
 
 Day 7 | Image filters 1 : Stipple Filter on Christopher Eccleston
-https://www.instagram.com/p/COknzJmKUkH/?utm_source=ig_web_copy_link
+https://www.instagram.com/p/COknzJmKUkH/
 
