@@ -5,5 +5,5 @@ Adventures in code !
 
 [PaakShastra : An attempt at translation] (https://jesmehta.github.io/Paak-Shastra/)
 
-[Design Resources](https://jesmehta.github.io//Notion_site/Data Visualization Resources 3547efbca6e9464ca93cbecf290c885e.html)
+[Design Resources](https://jesmehta.github.io/Notion_site/Data%20Visualization%20Resources%203547efbca6e9464ca93cbecf290c885e.html)
 
