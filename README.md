@@ -1,5 +1,3 @@
-#Adventures in code !
-My general sandbox and assorted links
 
 [Creative Coding in p5.js](https://jesmehta.github.io/P5-for-TI1/)  
 Code sketches from my Creative Coding class
