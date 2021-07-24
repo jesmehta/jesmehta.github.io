@@ -2,7 +2,7 @@
 My general sandbox and assorted links
 
 [Creative Coding in p5.js](https://jesmehta.github.io/P5-for-TI1/)  
-Class examples from the Introduction to Creative Coding module
+Code sketches from my Creative Coding class
 
 [PaakShastra : An attempt at translation](https://jesmehta.github.io/Paak-Shastra/)  
 A some-day project
@@ -11,3 +11,4 @@ A some-day project
 Ported my extensive Notion pages full of student resources over to GitHub for a site.
 
 [100 Days of Code](100%20Days%20of%20Code/readme.md)
+Collection of my Instagram posts on Generative Art
